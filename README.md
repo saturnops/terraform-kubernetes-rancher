@@ -3,6 +3,18 @@
 
 
 <br>
+This Terraform module deploys Rancher on a Kubernetes cluster, providing an open-source platform for managing Kubernetes and containerized applications. <br> 
+  
+
+  - Automatic generation of Kubernetes resources
+  - Support for deploying Rancher on a single node or multiple nodes
+
+## Supported Versions Table:
+
+| Rancher Helm Chart Version       |     K8s supported version   |  
+ | :-----:                       |         :---         |
+ | **2.7.0**          |    **1.23,1.24**       |
+ | **2.7.2**          |    **1.23,1.24,1.25**      |
 
 ## Important Notes:
 This module is compatible with EKS version 1.23, which is great news for users deploying the module on an EKS cluster running that version. Review the module's documentation, meet specific configuration requirements, and test thoroughly after deployment to ensure everything works as expected.
@@ -55,9 +67,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_chart_version"></a> [chart\_version](#input\_chart\_version) | Chart version | `string` | `"2.7.2"` | no |
-| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace name | `string` | `"cattle-system"` | no |
-| <a name="input_rancher_config"></a> [rancher\_config](#input\_rancher\_config) | Rancher configurations | `any` | <pre>{<br>  "email": "",<br>  "hostname": "",<br>  "values_yaml": ""<br>}</pre> | no |
+| <a name="input_chart_version"></a> [chart\_version](#input\_chart\_version) | Version of the Jenkins chart that will be used to deploy Rancher application. | `string` | `"2.7.2"` | no |
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | Name of the Kubernetes namespace where the Rancher deployment will be deployed. | `string` | `"cattle-system"` | no |
+| <a name="input_rancher_config"></a> [rancher\_config](#input\_rancher\_config) | Specify the configuration settings for Rancher including the hostname,email, and custom YAML values. | `any` | <pre>{<br>  "email": "",<br>  "hostname": "",<br>  "values_yaml": ""<br>}</pre> | no |
 
 ## Outputs
 
