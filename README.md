@@ -22,20 +22,20 @@ This module is compatible with EKS version 1.23, which is great news for users d
 
 ```hcl
 module "rancher" {
-  source         = "https://github.com/sq-ia/terraform-kubernetes-rancher.git"
+  source         = "saturnops/rancher/kubernetes"
   rancher_config = {
-    hostname = "rancher.saturnops.in"
     email    = "email@email.com"
+    hostname = ""
     values_yaml = ""
   }
 }
 
 
 ```
-Refer [examples](https://github.com/sq-ia/terraform-kubernetes-rancher/tree/main/examples/complete) for more details.
+Refer [examples](https://github.com/saturnops/terraform-kubernetes-rancher/tree/main/examples/complete) for more details.
 
 ## IAM Permissions
-The required IAM permissions to create resources from this module can be found [here](https://github.com/sq-ia/terraform-kubernetes-rancher/blob/main/IAM.md)
+The required IAM permissions to create resources from this module can be found [here](https://github.com/saturnops/terraform-kubernetes-rancher/blob/main/IAM.md)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
