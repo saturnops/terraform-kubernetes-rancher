@@ -38,7 +38,7 @@ variable "rancher_resource_limit" {
 }
 
 variable "create_resource_limit" {
-  description = "value"
+  description = "Whether enable or disble the resource limit For cattle-system namespace"
   default = false
   type = bool
 }
@@ -52,7 +52,7 @@ variable "rancher_resource_quota" {
 }
 
 variable "create_resource_quota" {
-  description = "value"
+  description = "Whether enable or disble the resource quota For cattle-system namespace"
   default = false
   type = bool
 }
