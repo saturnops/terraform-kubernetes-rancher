@@ -23,16 +23,16 @@ variable "chart_version" {
 variable "rancher_resource_limit" {
   type = any
   default = {
-    pod_max_cpu = ""
-    pod_max_mem = ""
-    pod_min_cpu = ""
-    pod_min_mem = ""
-    pvc_min_storage = ""
-    pvc_max_storage = ""
-    container_max_cpu = ""
-    container_min_mem = ""
-    container_min_cpu = ""
-    container_max_mem = ""
+    pod_max_cpu = "1000m"
+    pod_max_mem = "4000Mi"
+    pod_min_cpu = "5m"
+    pod_min_mem = "50Mi"
+    pvc_min_storage = "24M"
+    pvc_max_storage = "200G"
+    container_max_cpu = "1000m"
+    container_min_mem = "50Mi"
+    container_min_cpu = "5m"
+    container_max_mem = "3132Mi"
   }
   description = "Specify the configuration settings for Rancher resources limits including cpu, mem, pvc storage for Pods and Container."
 }
