@@ -13,6 +13,8 @@ No requirements.
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_azure"></a> [azure](#provider\_azure) | n/a |
+| <a name="provider_gcp"></a> [gcp](#provider\_gcp) | n/a |
 
 ## Modules
 

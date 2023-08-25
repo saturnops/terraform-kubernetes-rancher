@@ -11,13 +11,14 @@ This Terraform module deploys Rancher on a Kubernetes cluster, providing an open
 
 ## Supported Versions Table:
 
-| Rancher Helm Chart Version       |     K8s supported version   |  
+| Rancher Helm Chart Version       |     K8s supported version (EKS, AKS & GKE)   |  
  | :-----:                       |         :---         |
  | **2.7.0**          |    **1.23,1.24**       |
- | **2.7.2**          |    **1.23,1.24,1.25**      |
+ | **2.7.2**          |    **1.23,1.24,1.25,1.26,1.27**      |
 
 ## Important Notes:
-This module is compatible with EKS version 1.23, which is great news for users deploying the module on an EKS cluster running that version. Review the module's documentation, meet specific configuration requirements, and test thoroughly after deployment to ensure everything works as expected.
+This module is compatible with EKS, AKS, and GKE, making it ideal for deployments on AWS, Azure, and GCP. Review the documentation, meet configuration requirements, and test thoroughly to ensure proper functionality.
+
 ## Usage Example
 
 ```hcl
@@ -32,7 +33,9 @@ module "rancher" {
 
 
 ```
-Refer [examples](https://github.com/saturnops/terraform-kubernetes-rancher/tree/main/examples/complete) for more details.
+- Refer [AWS examples](https://github.com/saturnops/terraform-kubernetes-rancher/tree/main/examples/complete/aws) for more details.
+- Refer [Azure examples](https://github.com/saturnops/terraform-kubernetes-rancher/tree/main/examples/complete/azure) for more details.
+- Refer [GCP examples](https://github.com/saturnops/terraform-kubernetes-rancher/tree/main/examples/complete/gcp) for more details.
 
 ## IAM Permissions
 The required IAM permissions to create resources from this module can be found [here](https://github.com/saturnops/terraform-kubernetes-rancher/blob/main/IAM.md)
