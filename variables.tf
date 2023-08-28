@@ -44,10 +44,11 @@ variable "create_resource_limit" {
 }
 
 variable "rancher_resource_quota" {
-  type = object({
+  type = any
+  default = {
     no_of_pods          = 10
     no_of_services      = 5
-  })
+  }
   description = "Specify the configuration settings for Rancher resources quota in a namespace."
 }
 
