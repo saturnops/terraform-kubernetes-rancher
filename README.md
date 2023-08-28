@@ -14,7 +14,7 @@ This Terraform module deploys Rancher on a Kubernetes cluster, providing an open
 | Rancher Helm Chart Version       |     K8s supported version (EKS, AKS & GKE)   |  
  | :-----:                       |         :---         |
  | **2.7.0**          |    **1.23,1.24**       |
- | **2.7.2**          |    **1.23,1.24,1.25,1.26,1.27**      |
+ | **2.7.2**          |    **1.23,1.24,1.25,1.26**      |
 
 ## Important Notes:
 This module is compatible with EKS, AKS, and GKE, making it ideal for deployments on AWS, Azure, and GCP. Review the documentation, meet configuration requirements, and test thoroughly to ensure proper functionality.
