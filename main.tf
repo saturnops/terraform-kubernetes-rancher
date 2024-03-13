@@ -38,7 +38,7 @@ data "kubernetes_secret" "rancher_password" {
 resource "kubernetes_limit_range_v1" "rancher_limit" {
   count = var.create_resource_limit == true ? 1 : 0
   metadata {
-    name = "rancher-limit"
+    name      = "rancher-limit"
     namespace = var.namespace
   }
   spec {
@@ -79,12 +79,12 @@ resource "kubernetes_limit_range_v1" "rancher_limit" {
 resource "kubernetes_resource_quota_v1" "rancher_resource_quota" {
   count = var.create_resource_quota == true ? 1 : 0
   metadata {
-    name = "rancher-resource-quota"
+    name      = "rancher-resource-quota"
     namespace = var.namespace
   }
   spec {
     hard = {
-      pods = var.rancher_resource_quota.no_of_pods
+      pods     = var.rancher_resource_quota.no_of_pods
       services = var.rancher_resource_quota.no_of_services
     }
   }

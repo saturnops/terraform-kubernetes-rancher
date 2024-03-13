@@ -72,6 +72,12 @@ ingress:
     source: rancher
     secretName: tls-rancher-ingress
 
+### service ###
+# Override to use NodePort or LoadBalancer service type - default is ClusterIP
+service:
+  type: ""
+  annotations: {}
+
 ### LetsEncrypt config ###
 # ProTip: The production environment only allows you to register a name 5 times a week.
 #         Use staging until you have your config right.
@@ -149,7 +155,7 @@ postDelete:
   enabled: true
   image:
     repository: rancher/shell  #%POST_DELETE_IMAGE_NAME%
-    tag: v0.1.18  #%POST_DELETE_IMAGE_TAG%
+    tag: v0.1.22  #%POST_DELETE_IMAGE_TAG%
   namespaceList:
     - cattle-fleet-system
     - cattle-system
@@ -172,4 +178,7 @@ readinessProbe:
 global:
   cattle:
     psp:
-      enabled: false #PSPs enablement should default to true
+      enabled: ""
+      # enabled: false #PSPs enablement should default to true
+
+webhook: ""
